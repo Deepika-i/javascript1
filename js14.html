@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+                for (let i = 1; i <= 5; i++) {   
+
+                let row = "";
+
+                for (let j = 1; j <= i; j++) {
+                    row += "*";
+                }
+
+                console.log(row);
+            }
+
+            // I understand outer loop runs 5 times, and for each iteration of the outer loop, 
+            // the inner loop runs a number of times equal to the current value of i. 
+            // This results in printing a triangle of asterisks, where the first row has 1 asterisk, 
+            // the second row has 2 asterisks, and so on, up to 5 rows.
+    </script>
+</body>
+</html>

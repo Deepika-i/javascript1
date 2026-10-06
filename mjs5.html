@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ATM Machine</title>
+</head>
+<body>
+    <script>
+            
+let balance = 1000;
+let choice;
+
+do {
+    choice = prompt(
+        "ATM MENU\n1. Check Balance\n2. Deposit\n3. Withdraw\n4. Exit"
+    );
+
+    if (choice === "1") {
+        console.log("Your balance is ₹" + balance);
+
+    } else if (choice === "2") {
+        let deposit = Number(prompt("Enter deposit amount:"));
+
+        balance = balance + deposit;
+
+        console.log("Deposited successfully!");
+        console.log("New balance: ₹" + balance);
+
+    } else if (choice === "3") {
+        let withdraw = Number(prompt("Enter withdrawal amount:"));
+
+        if (withdraw > balance) {
+            console.log("Insufficient balance!");
+        } else if (withdraw <= 0) {
+            console.log("Enter a valid amount!");
+        } else {
+            balance = balance - withdraw;
+            console.log("New balance: ₹" + balance);
+        }
+
+    } else if (choice === "4" || choice === null) {
+        console.log("Thank you for using our ATM!");
+
+    } else {
+        console.log("Invalid choice!");
+    }
+
+} while (choice !== "4" && choice !== null);
+
+</script>
+</body>
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guess the Number</title>
+</head>
+<body>
+    <script>
+       const secretNumber = 7;
+
+        let guesses = [];
+
+        let attempts = 0;
+
+        for (let i = 0; i < 5; i++) {
+
+            let guess = Number(prompt("Enter your guess:"));
+
+            guesses.push(guess);
+
+            attempts++;
+
+            if (guess > secretNumber) {
+                console.log(`${guess} - Too High`);
+            }
+            else if (guess < secretNumber) {
+                console.log(`${guess} - Too Low`);
+            }
+            else {
+                console.log(`${guess} - Correct!`);
+                console.log(`You found the number in ${attempts} attempts.`);
+                break;
+            }
+        }
+
+        if (!guesses.includes(secretNumber)) {
+            console.log(`You couldn't guess the number.`);
+            console.log(`The secret number was ${secretNumber}.`);
+        }
+
+    </script>
+</body>
+</html>
